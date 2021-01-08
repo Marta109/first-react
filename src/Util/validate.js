@@ -1,11 +1,9 @@
-export const validate =(newVal)=>{
-    if(newVal.length <5){
-        return {
-            errorText:"minimmum letters is 6",
-            isValid: false 
-        }
-    } else {return{
-        errorText:"It's okay",
-        isValid: true
-    }}
-}
+export const validate = (val) => {
+  let errorTxt = "";
+  if (val.length <= 5) {
+    errorTxt = "minimmum letters is 6";
+  } else {
+    errorTxt = "It's okay";
+  }
+  return errorTxt;
+};
