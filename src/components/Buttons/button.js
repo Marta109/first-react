@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from 'reactstrap';
+import { Button as Btn } from 'reactstrap';
 
-const Buttons = (props) => {
+const Button = (props) => {
   return (
     <div>
       {" "}
-      <Button
+      <Btn
         outline
         color="primary"
         size="lg"
@@ -14,11 +14,11 @@ const Buttons = (props) => {
         onClick={props.onClick}
       >
         Log in{" "}
-      </Button>
-      <Button outline color="info" size="lg">
+      </Btn>
+      <Btn outline color="info" size="lg">
         Registration
-      </Button>{" "}
+      </Btn>{" "}
     </div>
   );
 };
-export default Buttons;
+export default Button;
