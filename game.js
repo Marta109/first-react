@@ -15,12 +15,12 @@ class Animal {
   };
 }
 
-const Rubbit = new Animal(15, 30, "Rabbit",0 ,15);
-const Kenguru = new Animal(10, 40, "Kenguru",0,20);
+const Rubbit = new Animal(15, 30, "Rabbit",0 ,20);
+const Kenguru = new Animal(10, 40, "Kenguru",0,30);
 
 function setup() {
   createCanvas(600, 400);
-  background("grey");
+  background("#8C6DD7");
    stroke(255, 100);
   frameRate(10);
 
@@ -33,10 +33,11 @@ function draw() {
  Kenguru.pos += Kenguru.move();
 
 fill(Rubbit.color());
-  ellipse(Rubbit.pos, 150+(Rubbit.move()/2), Rubbit.size, Rubbit.size);
+  ellipse(Rubbit.pos, 110+(Rubbit.move()/2), Rubbit.size, Rubbit.size);
 
 fill(Kenguru.color())
-  rect(Kenguru.pos, 300+Kenguru.move(), Kenguru.size, Kenguru.size);
+ellipse(Kenguru.pos, 270+Kenguru.move(), Kenguru.size, Kenguru.size);
+
 
   if (Rubbit.pos > width - 37) {
     noLoop();
